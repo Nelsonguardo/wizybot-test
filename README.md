@@ -26,23 +26,52 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Project setup
 
+## Instalación y ejecución del proyecto
+
+### 1. Clona el repositorio
 ```bash
-$ npm install
+git clone https://github.com/Nelsonguardo/wizybot-test.git
+cd wizybot-test
 ```
 
-## Compile and run the project
-
+### 2. Instala las dependencias
 ```bash
-# development
-$ npm run start
+npm install
+```
 
-# watch mode
-$ npm run start:dev
+### 3. Crea el archivo `.env`
 
-# production mode
-$ npm run start:prod
+Crea un archivo llamado `.env` en la raíz del proyecto con el siguiente contenido (reemplaza los valores según corresponda):
+
+```env
+DEEPSEEK_API_URL=https://api.deepseek.com
+DEEPSEEK_API_KEY=tu_clave_deepseek
+DEEPSEEK_API_MODEL=deepseek-chat
+```
+
+### 4. Ejecuta el proyecto
+
+Modo desarrollo:
+```bash
+npm run start:dev
+```
+
+Modo producción:
+```bash
+npm run build
+npm run start:prod
+```
+
+El servidor estará disponible en http://localhost:3000
+
+### 5. Pruebas
+```bash
+# Pruebas unitarias
+npm run test
+
+# Pruebas end-to-end
+npm run test:e2e
 ```
 
 ## Run tests
